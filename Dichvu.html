@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ Cày Thuê Game - Uy tín & Chuyên nghiệp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #0a0a1a;
+            --secondary: #00f3ff;
+            --accent: #ff00ff;
+            --light: #ffffff;
+            --dark: #0a0a1a;
+            --gray: #8a8a9e;
+            --neon-blue: #00f3ff;
+            --neon-pink: #ff00ff;
+            --neon-green: #00ff9d;
+            --neon-purple: #9d00ff;
+        }
+        
+        body {
+            background-color: #050510;
+            color: #ffffff;
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 243, 255, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 0, 255, 0.05) 0%, transparent 20%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(10, 10, 26, 0.9);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 30px rgba(0, 243, 255, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+            animation: pulse 2s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue); }
+            100% { text-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 40px var(--neon-blue); }
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(to right, var(--neon-blue), var(--neon-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 5px rgba(0, 243, 255, 0.5);
+        }
+        
+        .logo span {
+            color: var(--neon-pink);
+            text-shadow: 0 0 5px var(--neon-pink);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            padding: 8px 12px;
+            border-radius: 4px;
+            position: relative;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--neon-blue);
+            transition: all 0.3s;
+            transform: translateX(-50%);
+        }
+        
+        nav a:hover {
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+        
+        nav a:hover::after {
+            width: 80%;
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: 
+                linear-gradient(rgba(5, 5, 16, 0.9), rgba(5, 5, 16, 0.9)),
+                url('https://cdn.discordapp.com/attachments/1452203963838632058/1460978128309457032/search_69623f316eddecab7a3e4587.jpg?ex=6968e169&is=69678fe9&hm=b0764f3b5ad978ac13a30c32467b2d4635c0fa99891bdd6a819b2ef0893a923e&');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                transparent 0%, 
+                rgba(0, 243, 255, 0.1) 50%, 
+                transparent 100%);
+            animation: shimmer 8s infinite linear;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--neon-blue), var(--neon-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero h2::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(to right, var(--neon-blue), var(--neon-pink));
+            border-radius: 2px;
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: var(--light);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0, 243, 255, 0.4);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.7s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 243, 255, 0.8);
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+        
+        /* Services Section */
+        .services-section, .random-acc-section {
+            background: rgba(15, 15, 30, 0.8);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 25px rgba(0, 243, 255, 0.1);
+            border: 1px solid rgba(0, 243, 255, 0.1);
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services-section::before, .random-acc-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--neon-blue), var(--neon-pink));
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 2rem;
+            padding-bottom: 15px;
+            border-bottom: 2px solid transparent;
+            border-image: linear-gradient(to right, var(--neon-blue), transparent) 1;
+        }
+        
+        .section-title i {
+            color: var(--neon-blue);
+            font-size: 1.5rem;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+        
+        .section-title h3 {
+            font-size: 1.8rem;
+            color: var(--light);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Service Categories */
+        .service-category {
+            margin-bottom: 2.5rem;
+        }
+        
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+            color: var(--light);
+        }
+        
+        .category-title i {
+            color: var(--neon-pink);
+            text-shadow: 0 0 8px var(--neon-pink);
+        }
+        
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .service-item {
+            background: rgba(25, 25, 45, 0.7);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--neon-blue);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+        
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(0, 243, 255, 0.05), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+        
+        .service-item:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 243, 255, 0.3);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+        }
+        
+        .service-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--light);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+        
+        .service-price {
+            color: var(--neon-green);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 8px var(--neon-green);
+        }
+        
+        .service-desc {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Random Account Section */
+        .random-acc-section {
+            background: rgba(15, 15, 30, 0.8);
+        }
+        
+        .random-acc-section::before {
+            background: linear-gradient(to bottom, var(--neon-pink), var(--neon-purple));
+            box-shadow: 0 0 10px var(--neon-pink);
+        }
+        
+        .random-item {
+            background: rgba(30, 20, 45, 0.7);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--neon-pink);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .random-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 0, 255, 0.05), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+        
+        .random-item:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .random-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 0, 255, 0.3);
+        }
+        
+        .random-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .random-item.premium {
+            background: linear-gradient(to right, rgba(30, 20, 45, 0.7), rgba(45, 30, 60, 0.7));
+            border-left: 4px solid #f1c40f;
+            animation: premium-glow 2s infinite alternate;
+        }
+        
+        @keyframes premium-glow {
+            0% { box-shadow: 0 0 10px rgba(241, 196, 15, 0.5); }
+            100% { box-shadow: 0 0 20px rgba(241, 196, 15, 0.8), 0 0 30px rgba(241, 196, 15, 0.4); }
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: rgba(255, 243, 205, 0.1);
+            border-left: 5px solid #ffc107;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 193, 7, 0.2);
+        }
+        
+        .warning-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 193, 7, 0.05), transparent);
+        }
+        
+        .warning-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+            color: #ffc107;
+            text-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+        }
+        
+        .warning-title i {
+            text-shadow: 0 0 10px #ffc107;
+        }
+        
+        .warning-section ul {
+            padding-left: 20px;
+        }
+        
+        .warning-section li {
+            color: #ffcc80;
+            margin-bottom: 8px;
+        }
+        
+        /* Image Gallery */
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 3rem 0;
+        }
+        
+        .gallery-item {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 10px 25px rgba(0, 243, 255, 0.5);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(10, 10, 26, 0.95);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(0, 243, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--neon-blue), var(--neon-pink));
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--neon-blue);
+            text-shadow: 0 0 5px var(--neon-blue);
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #bdc3c7;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: var(--neon-blue);
+            text-shadow: 0 0 5px var(--neon-blue);
+            padding-left: 5px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-item i {
+            color: var(--neon-blue);
+            text-shadow: 0 0 5px var(--neon-blue);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(52, 73, 94, 0.5);
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .image-gallery {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .service-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 3rem 0;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h3 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(10, 10, 26, 0.8);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--neon-blue), var(--neon-pink));
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(var(--neon-pink), var(--neon-blue));
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-gamepad logo-icon"></i>
+                <h1>Dịch Vụ <span>Cày Thuê</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services"><i class="fas fa-tools"></i> Dịch Vụ</a></li>
+                    <li><a href="#random"><i class="fas fa-random"></i> Random Acc</a></li>
+                    <li><a href="#gallery"><i class="fas fa-images"></i> Hình Ảnh</a></li>
+                    <li><a href="#contact"><i class="fas fa-phone-alt"></i> Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Dịch Vụ Cày Thuê Uy Tín</h2>
+            <p>Chúng tôi cung cấp dịch vụ cày thuê game chuyên nghiệp với đội ngũ giàu kinh nghiệm. Cam kết hoàn thành đúng hẹn, bảo mật thông tin tài khoản.</p>
+            <a href="#contact" class="cta-button">Đặt Dịch Vụ Ngay</a>
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <div class="container" id="gallery">
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://cdn.discordapp.com/attachments/1452203963838632058/1460978127176995002/Screenshot_2026-01-13-17-04-27-77_f69139cffc4d135a71392e13634f144a.jpg?ex=6968e169&is=69678fe9&hm=7b2796ee8f08b85870a95f5c54266296c4fe17fa935cd6bf20c640ac31be45c7&" alt="Game Screenshot 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://cdn.discordapp.com/attachments/1452203963838632058/1460978127554740328/Screenshot_2026-01-13-17-04-16-88_f69139cffc4d135a71392e13634f144a.jpg?ex=6968e169&is=69678fe9&hm=0e02e5ada93e63b29a7fd48a79681ec0ee3301a4ff21654e04f66b7827bd1bf2&" alt="Game Screenshot 2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+            <div class="section-title">
+                <i class="fas fa-cogs"></i>
+                <h3>Dịch Vụ Cày Thuê</h3>
+            </div>
+            
+            <!-- Cày Beli -->
+            <div class="service-category">
+                <div class="category-title">
+                    <i class="fas fa-coins"></i>
+                    <h4>Cày Beli</h4>
+                </div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <div class="service-name">Cày Beli</div>
+                        <div class="service-price">1.000 VNĐ = 4m Beli + Fg Free</div>
+                        <div class="service-desc">Dịch vụ cày Beli nhanh chóng, hiệu quả</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cày Mastery -->
+            <div class="service-category">
+                <div class="category-title">
+                    <i class="fas fa-swords"></i>
+                    <h4>Cày Mastery</h4>
+                </div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <div class="service-name">Melee, Sword: 1–350</div>
+                        <div class="service-price">5.000 VNĐ</div>
+                        <div class="service-desc">Nâng cấp mastery cho vũ khí cận chiến</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Melee, Sword: 1–600</div>
+                        <div class="service-price">10.000 VNĐ</div>
+                        <div class="service-desc">Mastery cao cấp cho vũ khí cận chiến</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Fruit, Gun: 1–350 mas</div>
+                        <div class="service-price">10.000 VNĐ</div>
+                        <div class="service-desc">Nâng mastery cho trái ác quỷ và súng</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Fruit, Gun: 1–600 mas</div>
+                        <div class="service-price">20.000 VNĐ</div>
+                        <div class="service-desc">Mastery cao cấp cho trái ác quỷ và súng</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lấy Kiếm & Melee -->
+            <div class="service-category">
+                <div class="category-title">
+                    <i class="fas fa-sword"></i>
+                    <h4>Lấy Kiếm & Melee</h4>
+                </div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <div class="service-name">Shisui, Wando, Saddi</div>
+                        <div class="service-price">20.000 VNĐ</div>
+                        <div class="service-desc">Thông Thạo + ghép 3 Thanh</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Pole V2</div>
+                        <div class="service-price">15.000 VNĐ</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Rengoku</div>
+                        <div class="service-price">10.000 VNĐ</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Tushita</div>
+                        <div class="service-price">20.000 VNĐ</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Yama</div>
+                        <div class="service-price">20.000 VNĐ</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tộc Rồng + V4 -->
+            <div class="service-category">
+                <div class="category-title">
+                    <i class="fas fa-dragon"></i>
+                    <h4>Tộc Rồng + V4</h4>
+                </div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <div class="service-name">Gạt Cần</div>
+                        <div class="service-price">5.000 VNĐ</div>
+                        <div class="service-desc">Có sẵn Tộc V3</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Mảnh rương</div>
+                        <div class="service-price">15.000 VNĐ</div>
+                        <div class="service-desc">Đánh katav2 lấy mảnh gương</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Tộc V4 1 Gear</div>
+                        <div class="service-price">10.000 VNĐ</div>
+                        <div class="service-desc">Đã có Tộc V3, đã gạt cần</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Up Tộc V4 Full 4 Gear</div>
+                        <div class="service-price">40.000 VNĐ</div>
+                        <div class="service-desc">Đã có Tộc V3, đã gạt cần, có Mảnh Gương và Mảnh Mũ, bao F</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Combo: Up Tộc V4 Full gear + Gạt Cần</div>
+                        <div class="service-price">50.000 VNĐ</div>
+                        <div class="service-desc">Bao gồm Up Tộc V4 Full 5 Gear và Gạt Cần. Tính luôn F</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dịch Vụ Liên Quan -->
+            <div class="service-category">
+                <div class="category-title">
+                    <i class="fas fa-tools"></i>
+                    <h4>Dịch Vụ Liên Quan</h4>
+                </div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <div class="service-name">Lấy Súng Rồng (Dragon Storm)</div>
+                        <div class="service-price">20.000 VNĐ</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Lấy Kiếm Rồng (Dragon Heart)</div>
+                        <div class="service-price">20.000 VNĐ</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Lấy Full Đai</div>
+                        <div class="service-price">20.000 VNĐ</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Lấy Tộc Rồng 1-3</div>
+                        <div class="service-price">20.000 VNĐ</div>
+                        <div class="service-desc">Đã Lấy Súng + Kiếm + Trứng Và 8 Đai</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Levi (hydra)</div>
+                        <div class="service-price">50.000 VNĐ</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Tiki</div>
+                        <div class="service-price">40.000 VNĐ</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Lấy Tộc Quỷ</div>
+                        <div class="service-price">20.000 VNĐ</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Lấy Tộc Người Máy</div>
+                        <div class="service-price">20.000 VNĐ</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-name">Cày Bounty: 1m bounty</div>
+                        <div class="service-price">10.000 VNĐ</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Random Account Section -->
+        <section class="random-acc-section" id="random">
+            <div class="section-title">
+                <i class="fas fa-random"></i>
+                <h3>Random Account</h3>
+            </div>
+            
+            <div class="random-item">
+                <div class="service-name">Trò chơi nhân phẩm</div>
+                <div class="service-price">8.000 VNĐ</div>
+                <div class="service-desc">Được 1 trái truyền thuyết bất kì (lâu lâu có god và lv max)</div>
+            </div>
+            
+            <div class="random-item">
+                <div class="service-name">Acc max lv + god + trái truyền thuyết</div>
+                <div class="service-price">12.000 VNĐ</div>
+                <div class="service-desc">Ngay acc max lv + god + 1 trái truyền thuyết bất kì</div>
+            </div>
+            
+            <div class="random-item">
+                <div class="service-name">Tiger</div>
+                <div class="service-price">30.000 VNĐ / 1 trái</div>
+            </div>
+            
+            <div class="random-item">
+                <div class="service-name">Acc full gear tộc bất kì</div>
+                <div class="service-price">50.000 VNĐ</div>
+            </div>
+            
+            <div class="random-item">
+                <div class="service-name">Acc có tộc quỷ hoặc cá</div>
+                <div class="service-price">60.000 VNĐ</div>
+            </div>
+            
+            <div class="random-item">
+                <div class="service-name">Tỉ lệ ra acc có mele ART 100%</div>
+                <div class="service-price">36.000 VNĐ</div>
+            </div>
+            
+            <div class="random-item premium">
+                <div class="service-name">[Premium Acc] TK discord có key maru</div>
+                <div class="service-price">60.000 VNĐ</div>
+                <div class="service-desc">Có thể đổi thông tin</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Warning Section -->
+    <div class="container">
+        <div class="warning-section">
+            <div class="warning-title">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h4>Lưu ý quan trọng</h4>
+            </div>
+            <ul>
+                <li>Khi đang cày không được vào game. Nếu vào sẽ bị hủy đơn không hoàn tiền!</li>
+                <li>Không hoàn tiền khi hủy đơn</li>
+                <li>Không chịu trách nhiệm khi tài khoản bị ban!</li>
+                <li>Vui lòng cung cấp thông tin tài khoản chính xác để tránh sai sót</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Liên Hệ</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Zalo: 0393594964</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Gmail: nhat75141@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook: https://www.facebook.com/share/1BZH9kYmTm/</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord: https://discord.gg/sWtCuDf6zw</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Dịch Vụ</h4>
+                    <a href="#services">Cày Beli</a>
+                    <a href="#services">Cày Mastery</a>
+                    <a href="#services">Lấy Kiếm & Melee</a>
+                    <a href="#services">Tộc Rồng + V4</a>
+                    <a href="#random">Random Account</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Hỗ Trợ</h4>
+                    <a href="#">Hướng dẫn đặt dịch vụ</a>
+                    <a href="#">Câu hỏi thường gặp</a>
+                    <a href="#">Chính sách bảo mật</a>
+                    <a href="#">Quy định dịch vụ</a>
+                    <a href="#">Phương thức thanh toán</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Dịch Vụ Cày Thuê. Tất cả các quyền được bảo lưu.</p>
+                <p>Website này không liên kết với bất kỳ nhà phát triển game nào. Dịch vụ được cung cấp bởi người chơi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a, .cta-button').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add animation to service items on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe service items
+        document.querySelectorAll('.service-item, .random-item, .gallery-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+        
+        // Highlight current section in navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section, .image-gallery');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Add neon glow effect to random elements
+        function addRandomNeonGlow() {
+            const neonColors = ['#00f3ff', '#ff00ff', '#00ff9d', '#9d00ff'];
+            const elements = document.querySelectorAll('.service-item, .random-item');
+            
+            elements.forEach(element => {
+                if (Math.random() > 0.7) { // 30% chance to add extra glow
+                    const randomColor = neonColors[Math.floor(Math.random() * neonColors.length)];
+                    element.style.boxShadow = `0 0 15px ${randomColor}`;
+                    
+                    // Reset after a while
+                    setTimeout(() => {
+                        element.style.boxShadow = '';
+                    }, 3000);
+                }
+            });
+        }
+        
+        // Run random neon glow effect every 5 seconds
+        setInterval(addRandomNeonGlow, 5000);
+        
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.backgroundPosition = `center ${scrolled * 0.5}px`;
+            }
+        });
+    </script>
+</body>
+</html>
